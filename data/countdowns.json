@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-26T07:10:43.191Z",
+  "updatedAt": "2026-09-26T07:10:52.842Z",
   "countdowns": [
     {
       "id": "overland-test",
@@ -12,7 +12,7 @@
       "id": "prueba-2-holaholalhoalhoalhoalhoalha",
       "name": "PRUEBA 2 holaholalhoalhoalhoalhoalha",
       "endAtUtc": "2026-09-30T18:00:00Z",
-      "active": true
+      "active": false
     }
   ]
 }
