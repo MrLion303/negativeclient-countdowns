@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Negative Client · Countdowns</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">NEGATIVE CLIENT</div>
+        <h1>Countdown Control</h1>
+        <p>Panel universal de cuentas regresivas · todo se guarda en UTC.</p>
+      </div>
+      <div class="top-actions">
+        <button id="authButton" class="btn secondary">AUTORIZAR</button>
+        <button id="newButton" class="btn primary">+ NUEVA CUENTA</button>
+      </div>
+    </header>
 
+    <main>
+      <section class="statusbar">
+        <div><span id="statusDot" class="dot"></span><span id="statusText">Modo lectura · autoriza GitHub para administrar</span></div>
+        <button id="refreshButton" class="link-btn">ACTUALIZAR</button>
+      </section>
+
+      <section class="section-head">
+        <div>
+          <div class="eyebrow">GALERÍA</div>
+          <h2>Mis cuentas regresivas</h2>
+        </div>
+        <div id="summary">Cargando…</div>
+      </section>
+
+      <section id="grid" class="grid"></section>
+
+      <section id="empty" class="empty" hidden>
+        <div class="plus">+</div>
+        <h3>No hay cuentas regresivas</h3>
+        <p>Crea la primera para poder activarla globalmente.</p>
+        <button id="emptyCreateButton" class="btn primary">CREAR CUENTA</button>
+      </section>
+    </main>
+  </div>
+
+  <div id="editModal" class="modal-wrap" hidden>
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <div class="eyebrow">COUNTDOWN</div>
+          <h2 id="editTitle">Nueva cuenta regresiva</h2>
+        </div>
+        <button class="icon-btn" data-close="editModal">×</button>
+      </div>
+      <form id="form">
+        <input id="idInput" type="hidden">
+        <label class="field">
+          <span>Nombre que aparecerá en Negative Client</span>
+          <input id="nameInput" maxlength="70" placeholder="Ej. Evento final de OVERLAND" required>
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Fecha final · UTC</span>
+            <input id="dateInput" type="date" required>
+          </label>
+          <label class="field">
+            <span>Hora final · UTC</span>
+            <input id="timeInput" type="time" step="1" required>
+          </label>
+        </div>
+        <div class="note">La fecha y hora se guardan exactamente como UTC. No se convierten desde tu zona horaria.</div>
+        <div class="modal-actions">
+          <button type="button" class="btn secondary" data-close="editModal">CANCELAR</button>
+          <button type="submit" class="btn primary">GUARDAR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="authModal" class="modal-wrap" hidden>
+    <div class="modal small">
+      <div class="modal-head">
+        <div>
+          <div class="eyebrow">GITHUB</div>
+          <h2>Autorizar administración</h2>
+        </div>
+        <button class="icon-btn" data-close="authModal">×</button>
+      </div>
+      <p class="muted">Usa un Fine-grained Personal Access Token con permiso <strong>Contents: Read and write</strong> únicamente para este repositorio. El token se guarda solo en memoria y se pierde al recargar.</p>
+      <label class="field">
+        <span>GitHub token</span>
+        <input id="tokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+      </label>
+      <p id="authError" class="error" hidden></p>
+      <div class="modal-actions">
+        <button type="button" class="btn secondary" data-close="authModal">CANCELAR</button>
+        <button id="connectButton" type="button" class="btn primary">CONECTAR</button>
+      </div>
+    </div>
+  </div>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="card-top">
+        <span class="pill"></span>
+        <button class="edit-link">EDITAR</button>
+      </div>
+      <h3 class="card-name"></h3>
+      <p class="card-date"></p>
+      <div class="count-preview"></div>
+      <div class="card-actions">
+        <button class="btn secondary delete-btn">ELIMINAR</button>
+        <button class="btn action-btn"></button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
