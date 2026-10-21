@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-21T18:26:11.863Z",
+  "updatedAt": "2026-10-21T19:07:20.930Z",
   "countdowns": [
     {
       "id": "instancia-de-overland-en-mantenimiento",
-      "name": "Instancia de OVERLAND en mantenimiento",
+      "name": "Prueba",
       "endAtUtc": "2026-10-21T21:00:00Z",
       "active": true
     }
