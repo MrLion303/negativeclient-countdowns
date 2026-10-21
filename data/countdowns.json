@@ -1,17 +1,11 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-27T18:55:57.761Z",
+  "updatedAt": "2026-10-21T18:24:40.807Z",
   "countdowns": [
     {
       "id": "prueba-2-holaholalhoalhoalhoalhoalha",
       "name": "PRUEBA 2 holaholalhoalhoalhoalhoalha",
       "endAtUtc": "2026-09-30T18:00:00Z",
-      "active": false
-    },
-    {
-      "id": "gregory-es-puto-putote",
-      "name": "NADIE LO QUIERE",
-      "endAtUtc": "2026-09-27T08:00:00Z",
       "active": false
     }
   ]
