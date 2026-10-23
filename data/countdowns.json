@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-23T03:24:19.435Z",
+  "updatedAt": "2026-10-23T03:24:27.612Z",
   "countdowns": [
     {
       "id": "instancia-de-overland-en-mantenimiento",
@@ -12,7 +12,7 @@
       "id": "aosdopa",
       "name": "aosdopa",
       "endAtUtc": "2026-10-24T18:00:00Z",
-      "active": false
+      "active": true
     }
   ]
 }
