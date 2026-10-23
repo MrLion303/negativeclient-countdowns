@@ -1,12 +1,18 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-23T03:24:11.741Z",
+  "updatedAt": "2026-10-23T03:24:19.435Z",
   "countdowns": [
     {
       "id": "instancia-de-overland-en-mantenimiento",
       "name": "Esternocleidomastoideo",
       "endAtUtc": "2026-10-23T21:00:00Z",
       "active": true
+    },
+    {
+      "id": "aosdopa",
+      "name": "aosdopa",
+      "endAtUtc": "2026-10-24T18:00:00Z",
+      "active": false
     }
   ]
 }
