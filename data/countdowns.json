@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-31T03:17:27.063Z",
+  "updatedAt": "2026-11-01T21:18:12.263Z",
   "countdowns": [
     {
       "id": "game-or-trick",
       "name": "GAME OR TRICK: 1 de noviembre 21 UTC",
-      "endAtUtc": "2026-11-01T21:00:00Z",
+      "endAtUtc": "2026-11-01T22:00:00Z",
       "active": true
     }
   ]
